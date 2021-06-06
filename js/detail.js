@@ -39,13 +39,14 @@ async function fetchDetails() {
     </div>
     `;
 
+    /* LIGHTBOX */
     const image = document.querySelector("#full-photo");
     const lightbox = document.createElement("div");
     lightbox.id = "lightbox";
     document.body.appendChild(lightbox);
     image.addEventListener("click", (e) => {
       lightbox.classList.add("active-lightbox");
-      fullPhoto = `<img src=${details.hits[0].largeImageURL}></img>`;
+      fullPhoto = `<img style="max-width: 95vw; max-height: 95vh" src=${details.hits[0].largeImageURL}></img>`;
       lightbox.innerHTML = fullPhoto;
     });
 

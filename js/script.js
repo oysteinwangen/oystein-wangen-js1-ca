@@ -24,10 +24,13 @@ async function fetchPhotos() {
 
       photosContainer.innerHTML += `<a href="/details.html?id=${photos.hits[i].id}" class="listing">
         <img class="listing-photo" src="${photos.hits[i].largeImageURL}></img>""
-        <div class="listing-username">
-        <p class="listing-username-text">
-        Taken by: ${photos.hits[i].user} </br>
-        Likes: ${photos.hits[i].likes}</p>
+        <div class="properties">
+        <div class="property-div">
+        <img class="property-img" src="../media/camera.svg" alt="Camera"></img>
+        Taken by: ${photos.hits[i].user}</div>
+        <div class="property-div">
+        <img class="property-img" src="../media/heart.svg" alt="Heart"></img>
+        Likes: ${photos.hits[i].likes}</div>
         </div>
         </a>`;
     }

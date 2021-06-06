@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: #222;
 }
 
 .container {
@@ -32,6 +33,7 @@ main {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 .nav-links li {
@@ -49,7 +51,7 @@ main {
 
 .nav-links li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .logo {
@@ -63,6 +65,10 @@ main {
   height: 100%;
 }
 
+h1 {
+  color: white;
+}
+
 .photo-container {
   display: flex;
   flex-flow: row wrap;
@@ -74,20 +80,32 @@ main {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .listing-photo {
   height: 200px;
   width: 350px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
-.listing-username {
-  padding-top: 10px;
+.property-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.listing-username-text {
-  color: rgba(0, 0, 0, 0.75);
+.property-img {
+  margin-right: 15px;
+  width: 20px;
+}
+.properties {
+  margin: 50px 0;
 }
 
 .details-container {

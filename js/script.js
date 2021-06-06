@@ -10,8 +10,6 @@ async function fetchPhotos() {
     const response = await fetch(url);
     const photos = await response.json();
 
-    console.log(photos);
-
     photosContainer.innerHTML = "";
 
     for (let i = 0; i < photos.hits.length; i++) {
@@ -23,19 +21,20 @@ async function fetchPhotos() {
       }
 
       photosContainer.innerHTML += `<a href="/details.html?id=${photos.hits[i].id}" class="listing">
-        <img class="listing-photo" src="${photos.hits[i].largeImageURL}></img>""
+        <img class="listing-photo" src="${photos.hits[i].webformatURL}></img>""
         <div class="properties">
+        <div class="w10"></div>
         <div class="property-div">
         <img class="property-img" src="../media/camera.svg" alt="Camera"></img>
         Taken by: ${photos.hits[i].user}</div>
         <div class="property-div">
         <img class="property-img" src="../media/heart.svg" alt="Heart"></img>
         Likes: ${photos.hits[i].likes}</div>
+        <div class="w20"></div>
         </div>
         </a>`;
     }
   } catch (error) {
-    console.log(error);
     photosContainer.innerHTML = "";
     photosContainer.innerHTML = error;
   }

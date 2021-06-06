@@ -222,6 +222,12 @@ button {
   margin-top: 5px;
 }
 
+.successmessage {
+  display: none;
+  margin-top: 30px;
+  color: white;
+}
+
 /* LIGHTBOX */
 #lightbox {
   position: fixed;
